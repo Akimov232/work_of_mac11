@@ -12,7 +12,7 @@ def click_evant(event=None):
     entry_field.delete(0,END)
     entry_field.insert(0 , str(CURRENT) + str(event))
     tmp = entry_field.get()
-    print(tmp)
+    # print(tmp)
     return tmp
 
 
@@ -20,7 +20,8 @@ def clear_event():
     entry_field.delete(0 , END)
 
 def add():
-    pass
+    number = entry_field.get()
+    entry_field.delete(0 , END)
 
 def resalt():
     pass
@@ -37,8 +38,8 @@ button_7 = Button(root , text='7' ,padx=40 , pady=20 , command=lambda: click_eva
 button_8 = Button(root , text='8' ,padx=40 , pady=20 , command=lambda: click_evant(8))
 button_9 = Button(root , text='9' ,padx=40 , pady=20, command=lambda: click_evant(9))
 button_0 = Button(root , text='0' ,padx=40 , pady=20, command=lambda: click_evant(0))
-button_add = Button(root , text='+' , padx=39 , pady=20,command=add())
-button_equal = Button(root , text='=' , padx=40 , pady=20,command=resalt())
+button_add = Button(root , text='+' , padx=39 , pady=20, command=add)
+button_equal = Button(root , text='=' , padx=40 , pady=20, command=resalt)
 button_clear = Button(root , text='Сброс' , padx=40 , pady=20, command=clear_event)
 
 button_1.grid(row=1 , column=0)
